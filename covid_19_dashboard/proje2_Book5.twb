@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook locale='en_US' original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='covid-19-data-resource-hub/covid-19-case-counts' inline='true' name='federated.1mg05wv101vqwx130k97q1ec6qir' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covid-19-data-resource-hub/covid-19-case-counts' name='webdata-direct.0dvegtd1dd3so611aelt713hzec0'>
+            <connection APIVersion='' authType='custom' authentication='yes' channel='https' class='webdata-direct' connectionData='{&quot;dataset&quot;:&quot;covid-19-data-resource-hub/covid-19-case-counts&quot;,&quot;query&quot;:&quot;SELECT * FROM covid_19_activity WHERE report_date BETWEEN &apos;2022-01-01&apos; AND &apos;2022-03-31&apos;&quot;,&quot;queryType&quot;:&quot;sql&quot;,&quot;version&quot;:&quot;1.1.0&quot;}' connectionName='covid-19-data-resource-hub/covid-19-case-counts' filename='' increment-key='' path='/' port='443' scriptVersion='' secondary_whitelist='' server='tableau.data.world' urlQuery='state=744f5ed0-b9c4-11ec-a857-4fa38bbf047b' username='' usernameAlias='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='webdata-direct.0dvegtd1dd3so611aelt713hzec0' name='Query Results' table='[QueryTable]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='webdata-direct.0dvegtd1dd3so611aelt713hzec0' name='Query Results' table='[QueryTable]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>people_positive_cases_count</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[people_positive_cases_count]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>people_positive_cases_count</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[county_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>county_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>province_state_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[province_state_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>province_state_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>report_date</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[report_date]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>report_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;date&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>continent_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[continent_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>continent_name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>data_source_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[data_source_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>data_source_name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_death_new_count</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[people_death_new_count]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>people_death_new_count</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_fips_number</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[county_fips_number]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>county_fips_number</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_alpha_3_code</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[country_alpha_3_code]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>country_alpha_3_code</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_short_name</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[country_short_name]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>country_short_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_alpha_2_code</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[country_alpha_2_code]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>country_alpha_2_code</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_positive_new_cases_count</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[people_positive_new_cases_count]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>people_positive_new_cases_count</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_death_count</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[people_death_count]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>people_death_count</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;int&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Measure Names' datatype='string' name='[:Measure Names]' role='dimension' type='nominal' />
+      <column caption='Min Date' datatype='date' name='[Calculation_794885356904329216]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{MIN([report_date])}' />
+      </column>
+      <column caption='Max Date' datatype='date' name='[Calculation_794885356904648705]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{MAX([report_date])}' />
+      </column>
+      <column caption='Max Date for US' datatype='date' name='[Calculation_794885356916748291]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ max(if [country_short_name] = &quot;United States&quot; THEN [report_date] END) }' />
+      </column>
+      <column caption='Date is Less Than or Equal to US Date' datatype='boolean' name='[Calculation_794885356916940804]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[report_date] &lt;= [Calculation_794885356916748291]' />
+      </column>
+      <column caption='Date is max?' datatype='boolean' name='[Calculation_794885356918374407]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_794885356904648705] = [report_date]' />
+      </column>
+      <column caption='Measure Values' datatype='real' name='[Multiple Values]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Query Results' datatype='table' name='[__tableau_internal_object_id__].[QueryTable_CA08E34CE5834215BA4E4FD87971D770]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country_alpha_2_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[country_alpha_3_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[country_short_name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[county_fips_number]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[county_name]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column datatype='string' name='[province_state_name]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/suley/Documents/My Tableau Repository/Datasources/federated.1mg05wv101vqwx130k97q1ec6qir_13q5fsx1xdqjum1h404331kd84nw.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/11/2022 06:44:21 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='covid-19-data-resource-hub/covid-19-case-counts' increment-value='%null%' refresh-type='create' rows-inserted='320131' timestamp-start='2022-04-11 18:43:58.188' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>people_positive_cases_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_positive_cases_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>people_positive_cases_count</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65849</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>county_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[county_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>county_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9117</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>province_state_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[province_state_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>province_state_name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>288</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>report_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[report_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>report_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Query Results</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>continent_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[continent_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>continent_name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>data_source_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[data_source_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>data_source_name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>people_death_new_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_death_new_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>people_death_new_count</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>300</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>county_fips_number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[county_fips_number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>county_fips_number</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20019</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_alpha_3_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_alpha_3_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country_alpha_3_code</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2061</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_short_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_short_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country_short_name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2506</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_alpha_2_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_alpha_2_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country_alpha_2_code</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2061</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>people_positive_new_cases_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_positive_new_cases_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>people_positive_new_cases_count</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2788</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>people_death_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_death_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>people_death_count</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Query Results</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4976</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_CA08E34CE5834215BA4E4FD87971D770]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Turkey&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Query Results' id='QueryTable_CA08E34CE5834215BA4E4FD87971D770'>
+            <properties context=''>
+              <relation connection='webdata-direct.0dvegtd1dd3so611aelt713hzec0' name='Query Results' table='[QueryTable]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid-19-data-resource-hub/covid-19-case-counts' name='federated.1mg05wv101vqwx130k97q1ec6qir' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mg05wv101vqwx130k97q1ec6qir'>
+            <column caption='Min Date' datatype='date' name='[Calculation_794885356904329216]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{MIN([report_date])}' />
+            </column>
+            <column caption='Max Date' datatype='date' name='[Calculation_794885356904648705]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{MAX([report_date])}' />
+            </column>
+            <column-instance column='[Calculation_794885356904329216]' derivation='None' name='[none:Calculation_794885356904329216:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_794885356904648705]' derivation='None' name='[none:Calculation_794885356904648705:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' name='[report_date]' role='dimension' type='ordinal' />
+            <column-instance column='[report_date]' derivation='Year' name='[yr:report_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904648705:qk]' value='*mmmm d, yyyy' />
+            <format attr='text-format' field='[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904329216:qk]' value='*mmmm d, yyyy' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00007f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904329216:qk]' />
+              <text column='[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904648705:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0' fontcolor='#d1d2d3' fontname='Slack-Lato,Slack-Fractions,appleLogo,sans-serif' fontsize='15'>Global COVID-19 Tracker </run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontcolor='#d1d2d3' fontname='Slack-Lato,Slack-Fractions,appleLogo,sans-serif' fontsize='15'><![CDATA[<[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904329216:qk]>-<[federated.1mg05wv101vqwx130k97q1ec6qir].[none:Calculation_794885356904648705:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1mg05wv101vqwx130k97q1ec6qir].[yr:report_date:ok]</cols>
+      </table>
+      <simple-id uuid='{09F951DC-33CA-4E76-8169-CA7DB7C02351}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{304986E6-686A-470E-9D5D-120EC56E2F4C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mg05wv101vqwx130k97q1ec6qir].[yr:Calculation_794885356904329216:ok]</field>
+            <field>[federated.1mg05wv101vqwx130k97q1ec6qir].[yr:Calculation_794885356904648705:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{ACD15A2E-2CDD-4332-9DD6-FC09F6963B59}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DBED7ADC-DF5A-4522-A6D8-B06AD1E4A780}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
